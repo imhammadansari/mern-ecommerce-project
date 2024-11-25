@@ -22,7 +22,7 @@ function Products() {
     console.log(image, name, price, discount, category);
 
     try {
-      const response = await axios.post("https://mern-ecommerce-project.vercel.app//products/addproducts", 
+      const response = await axios.post("https://mern-ecommerce-project.vercel.app/products/addproducts", 
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
