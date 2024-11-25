@@ -9,7 +9,7 @@ function OrderDetails() {
 
   const getOrderItems = async () => {
     try {
-      const response = await axios.get('https://mern-ecommerce-project.vercel.app//orderDetails');
+      const response = await axios.get('https://mern-ecommerce-project.vercel.app/orderDetails');
       
       console.log(response.data);
         setOrderItems(response.data.orders);
