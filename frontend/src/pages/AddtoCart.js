@@ -15,7 +15,7 @@ function AddtoCart() {
 
   const getCartProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/addtoCart");
+      const response = await axios.get("https://mern-ecommerce-project.vercel.app//addtoCart");
       const user = response.data.user;
 
       setcartProducts(user.cart || []); 
@@ -59,7 +59,7 @@ function AddtoCart() {
 
   const deleteProduct = async (productId) => {
     try {
-      const response = await axios.delete(`http://localhost:8080/removeFromCart/${productId}`);
+      const response = await axios.delete(`https://mern-ecommerce-project.vercel.app//removeFromCart/${productId}`);
       if (response.status === 200) {
         setcartProducts((prevCart) => prevCart.filter((item) => item._id !== productId));
         setQuantities((prevQuantities, index) => 
