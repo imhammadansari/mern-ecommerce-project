@@ -12,7 +12,7 @@ function Shop() {
   axios.defaults.withCredentials = true;
   const addtoCart = async (productId) => {
     try {
-      const response = await axios.post(`http://localhost:8080/addtoCart/${productId}`);
+      const response = await axios.post(`https://mern-ecommerce-project.vercel.app/addtoCart/${productId}`);
       console.log(response);
       setCartProducts(response.data); 
     } catch (error) {
@@ -22,7 +22,7 @@ function Shop() {
   
   const getProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/shop');
+      const response = await axios.get('https://mern-ecommerce-project.vercel.app/shop');
       setProducts(response.data.product);
       console.log(response.data.product);
     } catch (error) {
