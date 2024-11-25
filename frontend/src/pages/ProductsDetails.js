@@ -18,7 +18,7 @@ const ProductDetails = () => {
 
     const getProduct = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/items/${productid}`);
+            const response = await axios.get(`https://mern-ecommerce-project.vercel.app//items/${productid}`);
             setProduct(response.data.product);
             console.log(response.data.product);
         } catch (error) {
