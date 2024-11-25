@@ -31,7 +31,7 @@ function Checkout() {
         try {
           const productIds = cartProducts.map(item => item._id);
       
-          const response = await axios.post("https://mern-ecommerce-project.vercel.app//placeOrder", {
+          const response = await axios.post("https://mern-ecommerce-project.vercel.app/placeOrder", {
             productIds: productIds,
             quantities: quantities,  
             totalPrice: totalPrice,   
