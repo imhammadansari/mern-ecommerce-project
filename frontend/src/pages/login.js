@@ -28,7 +28,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/users/login", {
+      const response = await axios.post("https://mern-ecommerce-project.vercel.app/users/login", {
         email: email,
         password: password
       });
